@@ -1,0 +1,91 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    font-family: 'Amatic SC', cursive;
+    overflow: hidden;
+    touch-action: none; /* Prevent dragging and touch zooming */
+}
+
+.scene {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 2s ease;
+    width: 100%; /* Ensure scenes span entire viewport */
+    height: 100%;
+}
+
+.visible {
+    display: flex;
+    opacity: 1;
+}
+
+img {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    margin-bottom: 10px;
+    max-width: 80%; /* Ensure image scales for mobile */
+}
+
+.line {
+    width: 90%; /* Keep line width within viewport */
+    height: 2px;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 2s ease;
+    margin-bottom: 10px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Add space between rows */
+    font-size: 20px; /* Adjusted for better fit */
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid transparent;
+    max-width: 90%; /* Prevent text from exceeding screen width */
+    word-wrap: break-word;
+}
+
+.text-row {
+    font-size: inherit; /* Inherit parent text size */
+    color: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Smooth fade-in */
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    img {
+        width: 120px; /* Reduce GIF size for smaller screens */
+    }
+
+    .text {
+        font-size: 16px; /* Reduce text size for better visibility */
+    }
+}
+
+@media (max-width: 320px) {
+    img {
+        width: 100px; /* Further reduce GIF size for very small screens */
+    }
+
+    .text {
+        font-size: 14px;
+    }
+}
