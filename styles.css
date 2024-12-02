@@ -31,27 +31,27 @@ body {
 }
 
 img {
-    width: 150px;
+    width: 50%; /* Scales dynamically relative to viewport */
+    max-width: 300px; /* Upper limit for larger screens */
     height: auto;
     cursor: pointer;
-    margin-bottom: 10px;
-    max-width: 80%; /* Ensure image scales for mobile */
+    margin-bottom: 20px;
 }
 
 .line {
     width: 90%; /* Keep line width within viewport */
-    height: 2px;
+    height: 3px; /* Slightly thicker line */
     background-color: black;
     opacity: 0;
     transition: opacity 2s ease;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .text {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Add space between rows */
-    font-size: 20px; /* Adjusted for better fit */
+    gap: 20px; /* Add space between rows */
+    font-size: 28px; /* Larger font size */
     color: #333;
     white-space: nowrap;
     overflow: hidden;
@@ -70,22 +70,35 @@ img {
 }
 
 /* Responsive Design */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     img {
-        width: 120px; /* Reduce GIF size for smaller screens */
+        width: 60%; /* Adjust size for smaller screens */
+        max-width: 240px; /* Slightly smaller cap */
     }
 
     .text {
-        font-size: 16px; /* Reduce text size for better visibility */
+        font-size: 24px; /* Adjusted for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    img {
+        width: 70%; /* Larger relative size for very small screens */
+        max-width: 200px;
+    }
+
+    .text {
+        font-size: 20px; /* Ensure text fits on very small screens */
     }
 }
 
 @media (max-width: 320px) {
     img {
-        width: 100px; /* Further reduce GIF size for very small screens */
+        width: 80%; /* Ensure the image scales properly */
+        max-width: 180px;
     }
 
     .text {
-        font-size: 14px;
+        font-size: 18px; /* Further reduction for ultra-small screens */
     }
 }
