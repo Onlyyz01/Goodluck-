@@ -62,7 +62,7 @@ const scenes = [
     },
     {
         element: document.getElementById("scene2"),
-        text: "Hello Theree!! How have you been? Tomorrow is the 2nd Quarterly text, Right?",
+        text: "Hello Theree!! How have you been? Tomorrow is the 2nd Quarterly Exam, Right?",
         interaction: () => {
             setTimeout(() => {
                 fadeOut(scenes[1].element, () => {
@@ -73,7 +73,7 @@ const scenes = [
     },
     {
         element: document.getElementById("scene3"),
-        text: "I know the exam might be tough, but I believe in you! Trust yourself, take a moment to pray, and you’ll do great. You’ve got this!",
+        text: "I know the exam might be tough and difficult, but I believe in you! Trust yourself, take a moment to pray, and you’ll do great. You’ve got this!😸",
         interaction: () => {
             setTimeout(() => {
                 fadeOut(scenes[2].element, () => {
@@ -84,7 +84,7 @@ const scenes = [
     },
     {
         element: document.getElementById("scene4"),
-        text: "GOODLUCK!! I know you can do it. No matter the outcome, It'll be fine. Just do your best! You've got this 😸😸",
+        text: "GOODLUCK!! I know you can do it. No matter the outcome is, It'll be fine. Just do your best! You've got this 😸😸",
         interaction: null
     }
 ];
@@ -101,7 +101,7 @@ function showScene(index) {
     fadeInLine(lineElement); // Line fades in
 
     // Adjust text into rows for mobile
-    const maxCharacters = 25; // Adjust for mobile-friendly width
+    const maxCharacters = 40; // Adjust for mobile-friendly width
     const rows = splitTextIntoRows(scene.text, maxCharacters);
 
     textElement.textContent = ''; // Clear previous content
