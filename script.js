@@ -62,7 +62,7 @@ const scenes = [
     },
     {
         element: document.getElementById("scene2"),
-        text: "Hello Theree!! How have you been? Tomorrow is the 2nd Quarterly Exam, Right?",
+        text: "Hello Theree!! How have you been? Later is the 2nd Quarterly Exam, Right?",
         interaction: () => {
             setTimeout(() => {
                 fadeOut(scenes[1].element, () => {
